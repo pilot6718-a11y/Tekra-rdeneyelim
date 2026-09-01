@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bizim İçin Bir Şans Daha...</title>
+    <style>
+        :root {
+            --bg-color: #faf5f5;
+            --card-bg: #ffffff;
+            --primary-color: #e8a5a5;
+            --text-color: #4a4a4a;
+            --accent-color: #b5838d;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 700px;
+            width: 90%;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--accent-color);
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        /* Music Player */
+        .music-player {
+            background: var(--card-bg);
+            padding: 15px 25px;
+            border-radius: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            display: inline-block;
+        }
+
+        /* Typewriter Section */
+        .message-box {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+            min-height: 120px;
+            text-align: left;
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 2px;
+            background-color: var(--accent-color);
+            animation: blink 0.7s infinite;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.03);
+        }
+
+        /* Call to Action Button */
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(232, 165, 165, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        /* Hearts animation overlay */
+        .heart {
+            position: fixed;
+            font-size: 24px;
+            animation: float 4s linear forwards;
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) scale(0); opacity: 1; }
+            100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
+        }
+
+        #final-message {
+            display: none;
+            margin-top: 30px;
+            padding: 20px;
+            background: #fff0f2;
+            border-radius: 15px;
+            color: var(--accent-color);
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Seni Üzdüğüm İçin Özür Dilerim...</h1>
+
+        <div class="music-player">
+            <audio controls autoplay loop>
+                <source src="muzik-linki.mp3" type="audio/mpeg">
+                Tarayıcınız müzik çaları desteklemiyor.
+            </audio>
+        </div>
+
+        <div class="message-box">
+            <span id="typewriter"></span><span class="cursor">&nbsp;</span>
+        </div>
+
+        <div class="gallery">
+            <img src="https://picsum.photos/300/300?random=1" alt="Anı 1">
+            <img src="https://picsum.
